@@ -1,0 +1,38 @@
+ version: '3'
+ services:
+  fma_user:
+    build: ./user
+    image: fma_user
+    restart: always
+    ports:
+      - "5002:5002"
+    networks:
+      - local
+  fma_category:
+    build: ./category
+    image: fma_category
+    restart: always
+    ports:
+      - "5003:5003"
+    networks:
+      - local  
+  fma_expense:
+    build: ./expense
+    image: fma_expense
+    restart: always
+    ports:
+      - "5004:5004"
+    networks:
+      - local  
+  fma_income:
+    build: ./income
+    image: fma_income
+    restart: always
+    ports:
+      - "5005:5005"
+    networks:
+      - local  
+
+ networks:
+  local:
+    driver: bridge
