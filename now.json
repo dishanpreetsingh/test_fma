@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "finance-managment-app",
+    "name": "stripe-app",
     "builds": [
       {
         "src": "dist/main.js",
